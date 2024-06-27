@@ -1,6 +1,7 @@
 def main():
     email = input('Enter your email: ')
-    if not email.isalpha():
+    result = True
+    if not email[0].isalpha():
         result = False
     elif len(email) <=5 or len(email) >= 30:
         result = False
@@ -8,7 +9,7 @@ def main():
         result = False
     else:
         at_index = email.index('@')
-        if '.' not in email[at_index]:
+        if '.' not in email[at_index:]:
             result = False
     print(result)
 
