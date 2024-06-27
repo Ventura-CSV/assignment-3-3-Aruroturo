@@ -2,6 +2,17 @@ def main():
     email = input('Enter your email: ')
     if not email.isalpha():
         result = False
+    elif len(email) <=5 or len(email) >= 30:
+        result = False
+    elif '@' not in email:
+        result = False
+    else:
+        at_index = email.index('@')
+        if '.' not in email[at_index]:
+            result = False
+    print(result)
+
+        
         
     """
     
@@ -9,7 +20,7 @@ def main():
     Code Your Program here
     ########################################
     """
-    result = True
+
 
     ########################################
     # Do not delete the return statement
