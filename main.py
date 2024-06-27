@@ -1,6 +1,10 @@
 def main():
     email = input('Enter your email: ')
+    if not email.isalpha():
+        result = False
+        
     """
+    
     ########################################
     Code Your Program here
     ########################################
